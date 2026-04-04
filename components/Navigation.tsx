@@ -48,11 +48,11 @@ export default function Navigation() {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+17135550100"
+              href="tel:+18322346888"
               className="text-sm font-semibold text-jade hover:text-jade-light transition-colors duration-150 flex items-center gap-1"
             >
               <PhoneIcon />
-              (713) 555-0100
+              (832) 234-6888
             </a>
             <Link
               href="/contact"
@@ -87,11 +87,11 @@ export default function Navigation() {
             ))}
             <div className="pt-3 space-y-2 border-t border-amber-100 mt-3">
               <a
-                href="tel:+17135550100"
+                href="tel:+18322346888"
                 className="flex items-center gap-2 px-3 py-2.5 text-base font-semibold text-jade"
               >
                 <PhoneIcon />
-                (713) 555-0100
+                (832) 234-6888
               </a>
               <Link
                 href="/contact"

@@ -39,11 +39,11 @@ export default function Home() {
                 Schedule a Free Tour
               </Link>
               <a
-                href="tel:+17135550100"
+                href="tel:+18322346888"
                 className="inline-flex items-center justify-center gap-2 border-2 border-jade text-jade hover:bg-jade hover:text-white font-semibold px-8 py-4 rounded-full text-base transition-colors duration-150"
               >
                 <PhoneIcon />
-                (713) 555-0100
+                (832) 234-6888
               </a>
             </div>
             <p className="mt-4 text-sm text-muted">
@@ -282,7 +282,7 @@ export default function Home() {
               Schedule a Free Tour
             </Link>
             <a
-              href="tel:+17135550100"
+              href="tel:+18322346888"
               className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-jade font-bold px-8 py-4 rounded-full text-base transition-colors duration-150"
             >
               <PhoneIcon />

@@ -93,7 +93,7 @@ export default function ContactForm() {
           type="tel"
           required
           className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-charcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition"
-          placeholder="(713) 555-0100"
+          placeholder="(832) 234-6888"
         />
       </div>
 

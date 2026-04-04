@@ -55,10 +55,10 @@ export default function ContactPage() {
                   Call Us
                 </div>
                 <a
-                  href="tel:+17135550100"
+                  href="tel:+18322346888"
                   className="text-2xl font-bold hover:text-gold transition-colors"
                 >
-                  (713) 555-0100
+                  (832) 234-6888
                 </a>
                 <p className="text-green-200 text-sm mt-2">
                   Available 7 days a week, 8am – 8pm
@@ -70,7 +70,7 @@ export default function ContactPage() {
                   Location
                 </div>
                 <p className="text-charcoal font-medium">
-                  1234 Bellaire Blvd
+                  9999 Bellaire Blvd
                 </p>
                 <p className="text-charcoal">Houston, TX 77036</p>
                 <p className="text-sm text-muted mt-2">

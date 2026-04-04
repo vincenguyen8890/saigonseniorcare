@@ -26,15 +26,15 @@ export default function Footer() {
             <div className="mt-5 space-y-2 text-sm text-gray-400">
               <div className="flex items-start gap-2">
                 <LocationIcon />
-                <span>1234 Bellaire Blvd, Houston, TX 77036</span>
+                <span>9999 Bellaire Blvd, Houston, TX 77036</span>
               </div>
               <div className="flex items-center gap-2">
                 <PhoneIcon />
                 <a
-                  href="tel:+17135550100"
+                  href="tel:+18322346888"
                   className="hover:text-gold transition-colors"
                 >
-                  (713) 555-0100
+                  (832) 234-6888
                 </a>
               </div>
               <div className="flex items-center gap-2">

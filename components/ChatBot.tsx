@@ -4,6 +4,15 @@ import { useState, useRef, useEffect } from "react";
 
 type Message = { role: "user" | "assistant"; content: string };
 
+const QUICK_REPLIES = [
+  "What services do you offer?",
+  "How much does it cost?",
+  "Schedule a free tour",
+  "Do you have Vietnamese staff?",
+  "Is memory care available?",
+  "Where are you located?",
+];
+
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -15,17 +24,19 @@ export default function ChatBot() {
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showQuickReplies, setShowQuickReplies] = useState(true);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (open) bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, open]);
 
-  async function send() {
-    const text = input.trim();
-    if (!text || loading) return;
+  async function send(text?: string) {
+    const content = (text ?? input).trim();
+    if (!content || loading) return;
 
-    const userMsg: Message = { role: "user", content: text };
+    setShowQuickReplies(false);
+    const userMsg: Message = { role: "user", content };
     const next = [...messages, userMsg];
     setMessages(next);
     setInput("");
@@ -72,14 +83,21 @@ export default function ChatBot() {
             <div className="w-8 h-8 rounded-full bg-gold flex items-center justify-center text-white font-bold text-xs shrink-0">
               S
             </div>
-            <div>
+            <div className="flex-1">
               <div className="font-semibold text-sm">Saigon Senior Care</div>
               <div className="text-xs text-green-200">Ask us anything</div>
             </div>
+            <button
+              onClick={() => setOpen(false)}
+              className="text-green-200 hover:text-white transition-colors"
+              aria-label="Close chat"
+            >
+              <XIcon />
+            </button>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 max-h-80 text-sm">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3 max-h-72 text-sm">
             {messages.map((m, i) => (
               <div
                 key={i}
@@ -103,6 +121,22 @@ export default function ChatBot() {
                 </div>
               </div>
             )}
+
+            {/* Quick reply buttons — shown only at the start */}
+            {showQuickReplies && !loading && (
+              <div className="pt-1 flex flex-wrap gap-2">
+                {QUICK_REPLIES.map((q) => (
+                  <button
+                    key={q}
+                    onClick={() => send(q)}
+                    className="text-xs bg-white border border-jade text-jade hover:bg-jade hover:text-white rounded-full px-3 py-1.5 transition-colors duration-150"
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
+            )}
+
             <div ref={bottomRef} />
           </div>
 
@@ -117,7 +151,7 @@ export default function ChatBot() {
               className="flex-1 text-sm border border-amber-200 rounded-full px-4 py-2 focus:outline-none focus:border-jade"
             />
             <button
-              onClick={send}
+              onClick={() => send()}
               disabled={!input.trim() || loading}
               className="w-9 h-9 bg-jade hover:bg-jade-light disabled:opacity-40 text-white rounded-full flex items-center justify-center transition-colors shrink-0"
             >
@@ -140,7 +174,7 @@ function ChatIcon() {
 
 function XIcon() {
   return (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
     </svg>
   );

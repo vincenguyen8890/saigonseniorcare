@@ -10,9 +10,28 @@ export default function ContactForm() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setState("submitting");
-    // Simulate async submission — replace with real API call
-    await new Promise((r) => setTimeout(r, 1200));
-    setState("success");
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+    try {
+      const res = await fetch("https://formspree.io/f/xgoppeld", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+      });
+      setState(res.ok ? "success" : "error");
+    } catch {
+      setState("error");
+    }
+  }
+
+  if (state === "error") {
+    return (
+      <div className="text-center py-8">
+        <p className="text-red-500 font-medium mb-2">Something went wrong.</p>
+        <p className="text-muted text-sm mb-4">Please try again or call us at (832) 234-6888.</p>
+        <button onClick={() => setState("idle")} className="text-jade underline text-sm">Try again</button>
+      </div>
+    );
   }
 
   if (state === "success") {

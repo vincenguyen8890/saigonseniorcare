@@ -2,28 +2,29 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact & Schedule a Tour | Saigon Senior Care Houston",
+  title: "Request a Free Care Consultation | Saigon Senior Care — Houston, TX",
   description:
-    "Schedule a free tour at Saigon Senior Care in Houston, TX. Bilingual staff available. Call us or fill out the form — we respond within one business day.",
+    "Talk with the Saigon Senior Care team about in-home care or residential senior living for your parent. Free consultation, English and Vietnamese, serving families in the Houston area.",
 };
 
 export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-cream to-amber-50 py-16 md:py-20">
+      <section className="bg-gradient-to-br from-ivory to-lotus-pale py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-jade-pale text-jade text-sm font-semibold px-4 py-1.5 rounded-full mb-5">
-              Get in Touch
+            <div className="inline-flex items-center gap-2 bg-burgundy-pale text-burgundy text-sm font-semibold px-4 py-1.5 rounded-full mb-5">
+              Free Care Consultation
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight">
-              We&apos;re Ready to Answer{" "}
-              <span className="text-gold">Every Question</span>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-navy leading-tight">
+              Let&apos;s Talk About{" "}
+              <span className="text-burgundy">Your Family.</span>
             </h1>
             <p className="mt-5 text-lg text-muted leading-relaxed">
-              Schedule a free tour, ask about availability, or simply get to
-              know us. Our bilingual team responds within one business day.
+              Tell us about your parent and what you&apos;re looking for. A
+              care advisor will reach out to listen, answer questions, and
+              help you understand your options — in English or Vietnamese.
             </p>
           </div>
         </div>
@@ -35,13 +36,13 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Form */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl shadow-sm border border-amber-50 p-7 md:p-9">
-                <h2 className="text-2xl font-bold text-charcoal mb-2">
-                  Schedule a Tour or Ask a Question
+              <div className="bg-white rounded-2xl shadow-sm border border-beige p-7 md:p-9">
+                <h2 className="font-serif text-2xl font-bold text-navy mb-2">
+                  Request a Free Care Consultation
                 </h2>
                 <p className="text-muted text-sm mb-7">
-                  Fill out the form below and we&apos;ll get back to you within
-                  one business day.
+                  Fill out the form below and we&apos;ll get back to you
+                  within one business day.
                 </p>
                 <ContactForm />
               </div>
@@ -49,55 +50,55 @@ export default function ContactPage() {
 
             {/* Info Panel */}
             <div className="lg:col-span-2 space-y-5">
-              {/* Quick contact cards */}
-              <div className="bg-jade text-white rounded-2xl p-6">
-                <div className="text-sm font-semibold text-green-200 mb-1 uppercase tracking-wide">
-                  Call Us
+              <div className="bg-navy text-white rounded-2xl p-6">
+                <div className="text-sm font-semibold text-lotus mb-1 uppercase tracking-wide">
+                  Call Saigon Senior Care
                 </div>
                 <a
                   href="tel:+18322346888"
-                  className="text-2xl font-bold hover:text-gold transition-colors"
+                  className="text-2xl font-bold hover:text-lotus transition-colors"
                 >
                   (832) 234-6888
                 </a>
-                <p className="text-green-200 text-sm mt-2">
-                  Available 7 days a week, 8am – 8pm
+                <p className="text-gray-300 text-sm mt-2">
+                  English &amp; Tiếng Việt
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl border border-amber-50 shadow-sm p-6">
-                <div className="text-sm font-semibold text-muted uppercase tracking-wide mb-3">
-                  Location
-                </div>
-                <p className="text-charcoal font-medium">
-                  9999 Bellaire Blvd
-                </p>
-                <p className="text-charcoal">Houston, TX 77036</p>
-                <p className="text-sm text-muted mt-2">
-                  Located in the heart of Houston&apos;s Vietnamese community.
-                  Ample free parking available.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl border border-amber-50 shadow-sm p-6">
+              <div className="bg-white rounded-2xl border border-beige shadow-sm p-6">
                 <div className="text-sm font-semibold text-muted uppercase tracking-wide mb-3">
                   Email
                 </div>
                 <a
                   href="mailto:hello@saigonseniorcare.com"
-                  className="text-jade hover:text-jade-light font-medium transition-colors"
+                  className="text-burgundy hover:text-burgundy-dark font-medium transition-colors"
                 >
                   hello@saigonseniorcare.com
                 </a>
               </div>
 
-              <div className="bg-gold-light rounded-2xl p-6">
-                <div className="font-bold text-charcoal mb-2">
-                  Tours Available 7 Days a Week
+              <div className="bg-white rounded-2xl border border-beige shadow-sm p-6">
+                <div className="text-sm font-semibold text-muted uppercase tracking-wide mb-3">
+                  Service Area
+                </div>
+                <p className="text-charcoal font-medium">
+                  Serving families in the Houston area
+                </p>
+                <p className="text-sm text-muted mt-2">
+                  Home care comes to you. Residential senior living locations
+                  are currently in development — ask about the priority list.
+                </p>
+              </div>
+
+              <div className="bg-burgundy-pale rounded-2xl p-6">
+                <div className="font-bold text-navy mb-2">
+                  What happens next?
                 </div>
                 <p className="text-sm text-charcoal/80 leading-relaxed">
-                  We welcome walk-ins, but scheduled tours give us time to
-                  prepare a personalized experience for your family.
+                  A care advisor reaches out within one business day. We
+                  listen first, then help you compare options — home care, a
+                  senior living home, or simply what to plan for. No pressure,
+                  no obligation.
                 </p>
               </div>
             </div>

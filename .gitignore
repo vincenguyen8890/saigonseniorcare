@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal/confidential research — do not publish
+Pricing Market Analysis.pdf
+report-market-analysis.md
+report-style.css

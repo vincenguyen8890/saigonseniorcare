@@ -5,12 +5,12 @@ import { useState, useRef, useEffect } from "react";
 type Message = { role: "user" | "assistant"; content: string };
 
 const QUICK_REPLIES = [
-  "What services do you offer?",
-  "How much does it cost?",
-  "Schedule a free tour",
-  "Do you have Vietnamese staff?",
-  "Is memory care available?",
-  "Where are you located?",
+  "What is Saigon Home Care?",
+  "What are Senior Living Homes?",
+  "How much does care cost?",
+  "Do you have Vietnamese-speaking caregivers?",
+  "How do I get started?",
+  "Request a free consultation",
 ];
 
 export default function ChatBot() {
@@ -19,7 +19,7 @@ export default function ChatBot() {
     {
       role: "assistant",
       content:
-        "Xin chào! 👋 Hi! I'm here to help you learn about Saigon Senior Care. Ask me anything about our services, availability, or how to schedule a free tour!",
+        "Xin chào! 👋 Hi! I'm here to help you learn about Saigon Senior Care — in-home care and small residential senior living homes for Houston families. How can I help?",
     },
   ]);
   const [input, setInput] = useState("");
@@ -66,30 +66,30 @@ export default function ChatBot() {
 
   return (
     <>
-      {/* Floating button */}
+      {/* Floating button — sits above the mobile sticky CTA bar */}
       <button
         onClick={() => setOpen(!open)}
         aria-label="Open chat"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-jade hover:bg-jade-light text-white rounded-full shadow-lg flex items-center justify-center transition-colors duration-150"
+        className="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-50 w-14 h-14 bg-navy hover:bg-navy-soft text-white rounded-full shadow-lg flex items-center justify-center transition-colors duration-150"
       >
         {open ? <XIcon /> : <ChatIcon />}
       </button>
 
       {/* Chat window */}
       {open && (
-        <div className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-amber-100 flex flex-col overflow-hidden">
+        <div className="fixed bottom-36 md:bottom-24 right-4 md:right-6 z-50 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-beige flex flex-col overflow-hidden">
           {/* Header */}
-          <div className="bg-jade text-white px-4 py-3 flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-gold flex items-center justify-center text-white font-bold text-xs shrink-0">
+          <div className="bg-navy text-white px-4 py-3 flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-burgundy flex items-center justify-center text-white font-bold text-xs shrink-0">
               S
             </div>
             <div className="flex-1">
               <div className="font-semibold text-sm">Saigon Senior Care</div>
-              <div className="text-xs text-green-200">Ask us anything</div>
+              <div className="text-xs text-lotus">Ask us anything</div>
             </div>
             <button
               onClick={() => setOpen(false)}
-              className="text-green-200 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors"
               aria-label="Close chat"
             >
               <XIcon />
@@ -106,8 +106,8 @@ export default function ChatBot() {
                 <div
                   className={`max-w-[80%] rounded-2xl px-3.5 py-2.5 leading-relaxed ${
                     m.role === "user"
-                      ? "bg-jade text-white rounded-br-sm"
-                      : "bg-amber-50 text-charcoal rounded-bl-sm"
+                      ? "bg-navy text-white rounded-br-sm"
+                      : "bg-ivory text-charcoal rounded-bl-sm"
                   }`}
                 >
                   {m.content}
@@ -116,7 +116,7 @@ export default function ChatBot() {
             ))}
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-amber-50 text-muted rounded-2xl rounded-bl-sm px-4 py-2.5 text-xs">
+                <div className="bg-ivory text-muted rounded-2xl rounded-bl-sm px-4 py-2.5 text-xs">
                   Typing…
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function ChatBot() {
                   <button
                     key={q}
                     onClick={() => send(q)}
-                    className="text-xs bg-white border border-jade text-jade hover:bg-jade hover:text-white rounded-full px-3 py-1.5 transition-colors duration-150"
+                    className="text-xs bg-white border border-burgundy text-burgundy hover:bg-burgundy hover:text-white rounded-full px-3 py-1.5 transition-colors duration-150"
                   >
                     {q}
                   </button>
@@ -141,19 +141,19 @@ export default function ChatBot() {
           </div>
 
           {/* Input */}
-          <div className="border-t border-amber-100 p-3 flex gap-2">
+          <div className="border-t border-beige p-3 flex gap-2">
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && send()}
               placeholder="Ask a question…"
-              className="flex-1 text-sm border border-amber-200 rounded-full px-4 py-2 focus:outline-none focus:border-jade"
+              className="flex-1 text-sm border border-beige-dark rounded-full px-4 py-2 focus:outline-none focus:border-burgundy"
             />
             <button
               onClick={() => send()}
               disabled={!input.trim() || loading}
-              className="w-9 h-9 bg-jade hover:bg-jade-light disabled:opacity-40 text-white rounded-full flex items-center justify-center transition-colors shrink-0"
+              className="w-9 h-9 bg-navy hover:bg-navy-soft disabled:opacity-40 text-white rounded-full flex items-center justify-center transition-colors shrink-0"
             >
               <SendIcon />
             </button>

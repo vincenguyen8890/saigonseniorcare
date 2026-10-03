@@ -2,38 +2,30 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-white">
+    <footer className="bg-navy-deep text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-full bg-gold flex items-center justify-center text-white font-bold text-sm">
-                S
-              </div>
-              <div>
-                <div className="font-bold text-white text-lg">
-                  Saigon Senior Care
-                </div>
-                <div className="text-xs text-gray-400">Houston, TX</div>
-              </div>
+            <div className="font-serif font-bold text-white text-xl mb-1">
+              Saigon Senior Care
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              A warm, family-oriented assisted living community in Houston, TX.
-              We honor Vietnamese traditions while providing world-class care
-              for your loved ones.
+            <div className="text-sm text-lotus mb-4">
+              Professional Care. Vietnamese Heart.
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+              Compassionate in-home care and intimate residential senior
+              living homes for Houston families — built around comfort,
+              dignity, culture, and family. All families are welcome.
             </p>
             <div className="mt-5 space-y-2 text-sm text-gray-400">
               <div className="flex items-start gap-2">
                 <LocationIcon />
-                <span>9999 Bellaire Blvd, Houston, TX 77036</span>
+                <span>Serving families in the Houston area</span>
               </div>
               <div className="flex items-center gap-2">
                 <PhoneIcon />
-                <a
-                  href="tel:+18322346888"
-                  className="hover:text-gold transition-colors"
-                >
+                <a href="tel:+18322346888" className="hover:text-lotus transition-colors">
                   (832) 234-6888
                 </a>
               </div>
@@ -41,7 +33,7 @@ export default function Footer() {
                 <EmailIcon />
                 <a
                   href="mailto:hello@saigonseniorcare.com"
-                  className="hover:text-gold transition-colors"
+                  className="hover:text-lotus transition-colors"
                 >
                   hello@saigonseniorcare.com
                 </a>
@@ -52,20 +44,18 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">
-              Quick Links
+              Explore
             </h3>
             <ul className="space-y-2.5 text-sm text-gray-400">
               {[
-                { href: "/", label: "Home" },
+                { href: "/home-care", label: "Saigon Home Care" },
+                { href: "/senior-living-homes", label: "Saigon Senior Living Homes" },
                 { href: "/about", label: "About Us" },
-                { href: "/services", label: "Services" },
+                { href: "/resources", label: "Family Resources" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="hover:text-gold transition-colors"
-                  >
+                  <Link href={link.href} className="hover:text-lotus transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -76,27 +66,35 @@ export default function Footer() {
           {/* CTA */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">
-              Ready to Visit?
+              Ready to Talk?
             </h3>
             <p className="text-sm text-gray-400 mb-4">
-              Come see our community in person. Tours are free and available
-              7 days a week.
+              Tell us about your family. A care advisor will reach out to
+              discuss options — no pressure, no obligation.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-gold hover:bg-gold-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors duration-150"
+              className="inline-block bg-burgundy hover:bg-burgundy-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors duration-150"
             >
-              Schedule a Tour
+              Request a Free Care Consultation
             </Link>
           </div>
         </div>
 
-        <div className="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-gray-500">
-          <p>
-            &copy; {new Date().getFullYear()} Saigon Senior Care. All rights
-            reserved.
+        <div className="mt-10 pt-8 border-t border-white/10 text-sm text-gray-500 space-y-3">
+          <p className="text-xs leading-relaxed max-w-3xl">
+            Services are subject to an individual care assessment and
+            availability. Residential senior living locations are currently
+            in development — contact us to join the priority list for
+            availability updates.
           </p>
-          <p>Houston, TX &mdash; Serving the Vietnamese community with heart.</p>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+            <p>
+              &copy; {new Date().getFullYear()} Saigon Senior Care. All rights
+              reserved.
+            </p>
+            <p>Houston, Texas</p>
+          </div>
         </div>
       </div>
     </footer>
@@ -105,36 +103,21 @@ export default function Footer() {
 
 function LocationIcon() {
   return (
-    <svg
-      className="w-4 h-4 mt-0.5 shrink-0"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
+    <svg className="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
         d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
       />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
     </svg>
   );
 }
 
 function PhoneIcon() {
   return (
-    <svg
-      className="w-4 h-4 shrink-0"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
+    <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -147,12 +130,7 @@ function PhoneIcon() {
 
 function EmailIcon() {
   return (
-    <svg
-      className="w-4 h-4 shrink-0"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
+    <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Our Services | Saigon Senior Care — Houston, TX",
   description:
     "Saigon Senior Care offers two service lines for Houston families: in-home senior care and small residential senior living homes. Explore which fits your family.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

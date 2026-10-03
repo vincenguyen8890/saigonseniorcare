@@ -60,7 +60,7 @@ export default function Navigation() {
                 href="/contact"
                 className="bg-burgundy hover:bg-burgundy-dark text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors duration-150 shadow-sm"
               >
-                Free Care Consultation
+                Request a Free Consultation
               </Link>
             </div>
 

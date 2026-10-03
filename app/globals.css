@@ -14,10 +14,15 @@
   --color-burgundy-pale: #F4E7E9;
   --color-lotus: #D9A3AD;
   --color-lotus-pale: #F8EEF0;
+  --color-gold: #B3892E;
+  --color-gold-pale: #F3EAD5;
+  --color-green: #2F6B4F;
+  --color-green-pale: #E4EFE8;
   --color-charcoal: #26282E;
   --color-muted: #625E56;
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-lora);
+  --font-serif: var(--font-playfair);
+  --font-script: var(--font-script-accent);
 }
 
 html {

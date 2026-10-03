@@ -13,7 +13,7 @@ Saigon Senior Care provides culturally familiar senior care through TWO service 
 Verified contact information:
 - Phone: (832) 234-6888
 - Email: hello@saigonseniorcare.com
-- Service area: families in the Houston area
+- Service area: Greater Houston, Texas
 
 Tagline: "Professional Care. Vietnamese Heart." All families are welcome, not only Vietnamese families.
 

@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="mt-5 space-y-2 text-sm text-gray-400">
               <div className="flex items-start gap-2">
                 <LocationIcon />
-                <span>Serving families in the Houston area</span>
+                <span>Serving Greater Houston, Texas</span>
               </div>
               <div className="flex items-center gap-2">
                 <PhoneIcon />
@@ -48,11 +48,13 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5 text-sm text-gray-400">
               {[
-                { href: "/home-care", label: "Saigon Home Care" },
-                { href: "/senior-living-homes", label: "Saigon Senior Living Homes" },
-                { href: "/about", label: "About Us" },
-                { href: "/resources", label: "Family Resources" },
+                { href: "/home-care", label: "Home Care" },
+                { href: "/senior-living-homes", label: "Senior Living Homes" },
+                { href: "/about", label: "About" },
+                { href: "/resources", label: "Resources" },
                 { href: "/contact", label: "Contact" },
+                { href: "/privacy", label: "Privacy" },
+                { href: "/terms", label: "Terms" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-lotus transition-colors">
@@ -93,7 +95,7 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Saigon Senior Care. All rights
               reserved.
             </p>
-            <p>Houston, Texas</p>
+            <p>English | Tiếng Việt &mdash; Houston, Texas</p>
           </div>
         </div>
       </div>

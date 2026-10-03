@@ -4,7 +4,8 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Us | Saigon Senior Care — Houston, TX",
   description:
-    "Saigon Senior Care was built around family — professional senior support with the language, food, and traditions that make aging parents feel at home. Serving families in the Houston area.",
+    "Saigon Senior Care was built around family — professional senior support with the language, food, and traditions that make aging parents feel at home. Serving Greater Houston, Texas.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [

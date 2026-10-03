@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Family Resources | Saigon Senior Care — Houston, TX",
   description:
     "Guides for Houston families navigating senior care decisions — home care vs. assisted living, costs, and how to talk with aging parents about care.",
+  alternates: { canonical: "/resources" },
 };
 
 const articles = [

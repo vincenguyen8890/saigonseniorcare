@@ -4,7 +4,8 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Request a Free Care Consultation | Saigon Senior Care — Houston, TX",
   description:
-    "Talk with the Saigon Senior Care team about in-home care or residential senior living for your parent. Free consultation, English and Vietnamese, serving families in the Houston area.",
+    "Talk with the Saigon Senior Care team about in-home care or residential senior living for your parent. Free consultation, English and Vietnamese, serving Greater Houston, Texas.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -82,7 +83,7 @@ export default function ContactPage() {
                   Service Area
                 </div>
                 <p className="text-charcoal font-medium">
-                  Serving families in the Houston area
+                  Serving Greater Houston, Texas
                 </p>
                 <p className="text-sm text-muted mt-2">
                   Home care comes to you. Residential senior living locations
